@@ -5,7 +5,7 @@ import {
   getFromLocalStorage,
   removeFromLocalStorage,
   setInLocalStorage,
-} from "../services/secureStorage";
+} from "../services/SecureStorage";
 
 const AuthContext = createContext();
 
