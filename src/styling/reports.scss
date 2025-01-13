@@ -1,0 +1,89 @@
+.reports-close {
+  display: none;
+}
+
+.reports {
+  max-height: 100%; /* Prevents reports from overflowing the viewport */
+  border-radius: 20px;
+
+  .date-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tbody-scroll {
+    max-height: 650px; /* Set a height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 8px; /* For Chrome/Edge: width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ccc; /* Scrollbar thumb color */
+      border-radius: 4px; /* Rounded edges for the thumb */
+    }
+  }
+
+  .tbody-scroll table {
+    border-collapse: collapse; /* Remove gaps between table cells */
+    text-align: center;
+    table-layout: auto;
+    // table-layout: fixed;
+    // width: 100%;
+
+    
+    .tbody-scroll tr {
+      white-space: nowrap; /* Prevent table cells from breaking into multiple lines */
+    }
+
+  }
+  
+
+  .filter-search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+  }
+
+  thead {
+    position: sticky;
+    background-color: #fff;
+    height: 50px;
+    top: 0;
+  }
+
+  @media (max-width: 576px) {
+    max-height: 35vh;
+  }
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  max-width: 100%;
+  width: 350px;
+  border-radius: 8px;
+  padding: 10px 0 10px 10px;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+  .inner-wrapper {
+    padding: 0.5rem;
+    p {
+      margin: 8px;
+    }
+    input {
+      border-radius: 18px;
+    }
+    .ant-select-selector {
+      border-radius: 18px !important;
+    }
+  }
+}
+.custom-select .ant-select-selector {
+  border-radius: 18px !important;
+}

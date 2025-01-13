@@ -1,0 +1,68 @@
+.dashboard {
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+  margin: 2rem 1rem;
+
+  .info-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 500; /* Ensure it appears above other elements */
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+
+  .map-section {
+    flex: 2;
+    z-index: 1;
+    margin-right: 1rem;
+  }
+
+  .reports-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 7px -4px #0003;
+    padding: 8px;
+    z-index: 2;
+    height: 95vh;
+    border-radius: 20px;
+    .add-report-wraaper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  // Media queries for small screens
+  @media (max-width: 768px) {
+    flex-direction: column-reverse; // Stack sections vertically for smaller screens
+    margin: 0.5rem;
+
+      .map-section {
+        margin-right: 0; // Remove right margin for vertical layout
+       
+      }
+
+      .reports-section {
+        height: auto; // Adjust height for content
+        max-height: 42vh; // Limit height to half of the viewport
+        margin:  0.5rem 0 1rem 0 ; 
+        overflow-y: auto; 
+
+        .add-report-wraaper {
+          flex-direction: column; // Stack buttons vertically
+          gap: 1rem; 
+        }
+      }
+  }
+}

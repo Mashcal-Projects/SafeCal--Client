@@ -1,0 +1,34 @@
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px dashed lightgray;
+  border-radius: 20px;
+  padding: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+  margin-bottom: 1rem;
+  width: 310px;
+}
+
+.file-upload-container.drag-active {
+  border-color: #1677ff;
+  background-color: #f0f8ff;
+}
+
+.file-upload-label {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.file-upload-container.drag-active .file-upload-label {
+  color: black;
+}
+
+.choose-file {
+  text-decoration: underline;
+  font-weight: bold;
+}
