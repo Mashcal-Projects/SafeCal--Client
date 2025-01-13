@@ -3,7 +3,7 @@ import { getAllReports, getAddress } from "../services/APIservice";
 import {
   getFromLocalStorage,
   setInLocalStorage,
-} from "../services/secureStorage";
+} from "../services/SecureStorage";
 
 const ReportContext = createContext();
 
