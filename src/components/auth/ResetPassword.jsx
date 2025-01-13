@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button } from "antd";
-import { resetPassword } from "../../Services/APIservice";
+import { resetPassword } from "../../services/APIservice;
 import "../../styling/resetPassword.scss";
 import { useTranslation } from "react-i18next";
 
