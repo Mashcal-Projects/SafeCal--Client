@@ -14,7 +14,7 @@ import {
 import dayjs from "dayjs";
 
 import "../styling/login.scss";
-import { addNewReport } from "../Services/APIservice";
+import { addNewReport } from "../services/APIservice";
 import FileUpload from "./FileUpload";
 
 export const AddReport = (props) => {

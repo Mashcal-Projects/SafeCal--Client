@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { getAllReports, getAddress } from "../Services/APIservice";
+import { getAllReports, getAddress } from "../services/APIservice";
 import {
   getFromLocalStorage,
   setInLocalStorage,

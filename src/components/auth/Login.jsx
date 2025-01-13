@@ -8,7 +8,7 @@ import { RegistrationComp } from "./Registration";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useAuth } from "../../context/AuthContext";
-import { requestPasswordReset } from "../../Services/APIservice";
+import { requestPasswordReset } from "../../services/APIservice";
 
 export const LoginComp = (props) => {
   const [type, setType] = useState("password");

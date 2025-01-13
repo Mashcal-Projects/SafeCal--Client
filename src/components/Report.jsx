@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useReport } from "../context/ReportContext";
 import "../styling/report.scss";
 import { useAuth } from "../context/AuthContext";
-import { updateReportStatus } from "../Services/APIservice";
+import { updateReportStatus } from "../services/APIservice";
 import ReactDOM from "react-dom";
 import { CloseOutlined } from "@ant-design/icons";
 

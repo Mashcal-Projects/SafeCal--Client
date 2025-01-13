@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { loginUser } from "../Services/APIservice";
+import { loginUser } from "../services/APIservice";
 import { useTranslation } from "react-i18next";
 import {
   getFromLocalStorage,

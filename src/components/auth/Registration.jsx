@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { registerUser } from "../../Services/APIservice";
+import { registerUser } from "../../services/APIservice";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useTranslation } from "react-i18next";
