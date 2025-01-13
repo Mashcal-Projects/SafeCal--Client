@@ -1,11 +1,12 @@
 import axios from "axios";
 
 const API_BASE_URL = "http://localhost:5000";
+const DEPLOY_URL ="https://safecal-475cd987e48c.herokuapp.com"
 
 const registerUser = async (userData) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/api/auth/register`,
+      `${DEPLOY_URL}/api/auth/register`,
       userData
     );
     if (response.status === 201) {
@@ -27,7 +28,7 @@ const registerUser = async (userData) => {
 
 const loginUser = async (userData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/api/auth/login`, userData);
+    const response = await axios.post(`${DEPLOY_URL}/api/auth/login`, userData);
     console.log("Login successful:", response.data);
     return response; // Return response for further handling in the context
   } catch (error) {
@@ -49,7 +50,7 @@ const loginUser = async (userData) => {
 const requestPasswordReset = async (email) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/api/auth/request-password-reset`,
+      `${DEPLOY_URL}/api/auth/request-password-reset`,
       { email }
     );
     return response.data.message; // Return the message from the server
@@ -65,7 +66,7 @@ const resetPassword = async (token, password) => {
   console.log("ResetPassword Function Called"); // Debug log
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/api/auth/reset-password/${token}`,
+      `${DEPLOY_URL}/api/auth/reset-password/${token}`,
       { password }
     );
     console.log("Backend Response:", response.data);
@@ -81,7 +82,7 @@ const resetPassword = async (token, password) => {
 // Fetch all reports
 const getAllReports = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/reports`);
+    const response = await axios.get(`${DEPLOY_URL}/reports`);
     return response.data.slice(0, 50); // Limit to 50 for testing; adjust as needed
   } catch (error) {
     console.error("Error fetching reports:", error);
@@ -104,7 +105,7 @@ const getAddress = async (lat, lon) => {
 // Update the status of a report
 const updateReportStatus = async (id, newStatus) => {
   try {
-    const response = await axios.patch(`${API_BASE_URL}/reports/${id}`, { status: newStatus });
+    const response = await axios.patch(`${DEPLOY_URL}/reports/${id}`, { status: newStatus });
     return response.data; // Return updated report data if needed
   } catch (error) {
     console.error("Error updating report status:", error);
@@ -123,7 +124,7 @@ const addNewReport = async (reportData) => {
     });
 
     // Send the FormData with Axios
-    const response = await axios.post(`${API_BASE_URL}/reports`, formData, {
+    const response = await axios.post(`${DEPLOY_URL}/reports`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
