@@ -16,7 +16,8 @@ i18n
     },
     backend: {
       //   loadPath: isDevelopment ? '/src/locales/{{lng}}/{{ns}}.json' : '/locales/{{lng}}/{{ns}}.json',
-      loadPath: "/src/locales/{{lng}}/{{ns}}.json",
+      // loadPath: "/src/locales/{{lng}}/{{ns}}.json",
+      loadPath: '/locales/{{lng}}/{{ns}}.json', 
     },
     ns: ["dashboard", "login", "report"], // List of namespaces
     defaultNS: "dashboard", // Default namespace used if not specified
