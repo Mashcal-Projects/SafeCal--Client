@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styling/loader.scss";
+import "../styling/loader.scss";
 
 export  const LoaderComp = ( {className = ''}) => {
   return (
