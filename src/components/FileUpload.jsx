@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "../styling/FileUpload.scss";
+import "../styling/fileUpload.scss";
 
 const FileUpload = ({ onFileChange,selectedFile }) => {
   const { t } = useTranslation("report");
