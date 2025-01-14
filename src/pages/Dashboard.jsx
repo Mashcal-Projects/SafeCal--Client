@@ -11,6 +11,8 @@ import { AddReport } from "../components/AddReport";
 import { LoginComp } from "../components/auth/Login";
 
 export const DashboardComp = () => {
+
+  console.log("DashboardComp rendered");
   const [addReport, setAddReport] = useState(false);
   const [loginComp, setLoginComp] = useState(false);
   const { isLoggedIn, logout } = useAuth();

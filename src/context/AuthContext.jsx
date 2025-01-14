@@ -12,6 +12,8 @@ const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
+
+  console.log("AuthProvider initialized");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null); // Store user data if needed
   const { t } = useTranslation("login");
