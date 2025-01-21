@@ -54,5 +54,7 @@
   "apply": "Apply Now",
   "reset": "Reset",
   "status": "Handled",
-  "success_message": "Success Message"
+  "success_message": "Success Message",
+  "no_reports_found":"No Reports Found",
+  "reports_text":"Add description"
 }

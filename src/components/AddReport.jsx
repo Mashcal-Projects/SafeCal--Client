@@ -183,7 +183,7 @@ export const AddReport = (props) => {
               formik.setFieldValue("location", ""); // Clear the location field
             } else {
               formik.setFieldValue("location", fetchedAddress); // Sync with Formik
-              
+
               formik.setFieldError("location", ""); // Clear any existing error
             }
           } catch (error) {
@@ -439,8 +439,7 @@ export const AddReport = (props) => {
                     </div>
                   ) : (
                     <>
-
-                    {/* when open get location by defalut  */}
+                      {/* when open get location by defalut  */}
                       <input
                         id="location"
                         name="location"
@@ -517,6 +516,35 @@ export const AddReport = (props) => {
                     : ""}
                 </span>
               </div>
+              {/*  Text Area */}
+              <div
+                className="input-wrapper"
+                style={{ height: "120px"}}
+              >
+                <textarea
+                  id="details"
+                  name="details"
+                  value={formik.values.details}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  placeholder={t("reports_text")}
+                  style={{
+                    width: "300px",
+                    height: "100px",
+                    padding: "0.3rem 1rem",
+                    resize:"none",
+                    border:"0.5px solid lightgray",
+                    borderRadius:"20px", 
+                    fontSize:"16px",
+                  }}
+                />
+                <span className="error-message">
+                  {formik.touched.details && formik.errors.details
+                    ? formik.errors.details
+                    : ""}
+                </span>
+              </div>
+
               <FileUpload
                 selectedFile={formik.values.image}
                 onFileChange={handleFileChange}

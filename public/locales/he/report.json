@@ -53,5 +53,7 @@
   "apply": "החל",
   "reset": "איפוס",
   "status": "טופל",
-  "success_message":"הדיווח נוסף בהצלחה "
+  "success_message":"הדיווח נוסף בהצלחה ",
+  "no_reports_found":"לא נמצאו דיווחים",
+  "reports_text":"טקסט חופשי"
 }
